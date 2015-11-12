@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4585F2A61BF4E11D008DE61A /* PFTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4585F2A51BF4E11D008DE61A /* PFTime.swift */; };
 		45B025221BF4865900D1BD9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B025211BF4865900D1BD9A /* AppDelegate.swift */; };
 		45B025291BF4865900D1BD9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45B025281BF4865900D1BD9A /* Assets.xcassets */; };
 		45B0253D1BF486BE00D1BD9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B025381BF486BE00D1BD9A /* LaunchScreen.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4585F2A51BF4E11D008DE61A /* PFTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFTime.swift; sourceTree = "<group>"; };
 		45B0251E1BF4865900D1BD9A /* PFKit-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PFKit-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45B025211BF4865900D1BD9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45B025281BF4865900D1BD9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4585F2A41BF4E103008DE61A /* PFTime */ = {
+			isa = PBXGroup;
+			children = (
+				4585F2A51BF4E11D008DE61A /* PFTime.swift */,
+			);
+			path = PFTime;
+			sourceTree = "<group>";
+		};
 		45B025151BF4865900D1BD9A = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +146,7 @@
 				45B025561BF48BCD00D1BD9A /* PFModel */,
 				45B025581BF48BCD00D1BD9A /* PFQRCode */,
 				45B0255A1BF48BCD00D1BD9A /* PFString */,
+				4585F2A41BF4E103008DE61A /* PFTime */,
 			);
 			path = PFKit;
 			sourceTree = "<group>";
@@ -245,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4585F2A61BF4E11D008DE61A /* PFTime.swift in Sources */,
 				45B0255F1BF48BCD00D1BD9A /* PFQRCode.swift in Sources */,
 				45B025601BF48BCD00D1BD9A /* String+PFJudge.swift in Sources */,
 				45B025221BF4865900D1BD9A /* AppDelegate.swift in Sources */,
