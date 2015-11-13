@@ -1,5 +1,5 @@
 //
-//  String+PFLocalized.swift
+//  PFLocalized.swift
 //  PFKit-Swift
 //
 //  Created by PFei_He on 15/11/12.

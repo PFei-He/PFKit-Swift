@@ -5,39 +5,27 @@
       location = "group:PFKit"
       name = "PFKit">
       <Group
-         location = "group:PFFile"
-         name = "PFFile">
+         location = "group:Extension"
+         name = "Extension">
+         <FileRef
+            location = "group:PFJudge.swift">
+         </FileRef>
+         <FileRef
+            location = "group:PFLocalized.swift">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:PFKit"
+         name = "PFKit">
          <FileRef
             location = "group:PFFile.swift">
          </FileRef>
-      </Group>
-      <Group
-         location = "group:PFModel"
-         name = "PFModel">
          <FileRef
             location = "group:PFModel.swift">
          </FileRef>
-      </Group>
-      <Group
-         location = "group:PFQRCode"
-         name = "PFQRCode">
          <FileRef
             location = "group:PFQRCode.swift">
          </FileRef>
-      </Group>
-      <Group
-         location = "group:PFString"
-         name = "PFString">
-         <FileRef
-            location = "group:String+PFJudge.swift">
-         </FileRef>
-         <FileRef
-            location = "group:String+PFLocalized.swift">
-         </FileRef>
-      </Group>
-      <Group
-         location = "group:PFTime"
-         name = "PFTime">
          <FileRef
             location = "group:PFTime.swift">
          </FileRef>
