@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>PFKit-Swift.xcscheme</key>
+		<key>Demo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>45B0251D1BF4865900D1BD9A</key>
+		<key>456225EB1BF57C94008202A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

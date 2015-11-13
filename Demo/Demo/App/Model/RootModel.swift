@@ -1,12 +1,12 @@
 //
-//  PersonModel.swift
-//  PFKit-Swift
+//  RootModel.swift
+//  Demo
 //
-//  Created by PFei_He on 15/11/12.
+//  Created by PFei_He on 15/11/13.
 //  Copyright © 2015年 PF-Lib. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class Sports: PFModel {
     
@@ -25,7 +25,7 @@ class Food: PFModel {
     var fruit   = Array<AnyObject>()
 }
 
-class PersonModel: PFModel {
+class Person: PFModel {
     
     var name    = String()
     var age     = Int()
@@ -44,13 +44,13 @@ class PersonModel: PFModel {
      - Parameter 无参
      - Returns: PersonModel类的唯一实例
      */
-    class func sharedInstance() -> PersonModel {
+    class func sharedInstance() -> Person {
         struct sharedInstance {
             static var onceToken: dispatch_once_t = 0
-            static var instance: PersonModel? = nil
+            static var instance: Person? = nil
         }
         dispatch_once(&sharedInstance.onceToken) { () -> Void in
-            sharedInstance.instance = PersonModel()
+            sharedInstance.instance = Person()
         }
         return sharedInstance.instance!
     }
