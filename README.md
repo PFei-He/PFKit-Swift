@@ -2,7 +2,7 @@
 ===
 
 [![License MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://raw.githubusercontent.com/ibireme/YYKit/master/LICENSE)&nbsp;
-[![Support](https://img.shields.io/badge/support-iOS%208%2B%20-blue.svg?style=flat)](https://www.apple.com/nl/ios/)&nbsp;
+[![Support](https://img.shields.io/badge/support-iOS%207%2B%20-blue.svg?style=flat)](https://www.apple.com/nl/ios/)&nbsp;
 
 对系统API进行简单封装，实现常用功能
 
