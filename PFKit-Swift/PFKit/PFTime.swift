@@ -1,5 +1,5 @@
 //
-//  PFLocalized.swift
+//  PFTime.swift
 //  PFKit-Swift
 //
 //  Created by PFei_He on 15/11/12.
@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFKit-Swift
 //
-//  vesion: 0.0.3
+//  vesion: 0.0.5
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -28,27 +28,22 @@
 //  THE SOFTWARE.
 //
 
-import Foundation
+import UIKit
 
-extension String {
-    
+class PFTime: NSObject {
+
     /**
-     本地化
+     根据格式获取当前时间
      - Note:
-     - Parameter 无参
-     - Returns: 当前语言环境对应的值
+     - Parameter format: 输出的时间格式
+     - Returns: 当前时间
      */
-    var localized: String {
-        return NSLocalizedString(self, tableName: nil, bundle: NSBundle.mainBundle(), value: "", comment: "")
-    }
-    
-    /**
-     本地化带注释
-     - Note:
-     - Parameter comment: 本地化文件中的注释
-     - Returns: 当前语言环境对应的值
-     */
-    func localizedWithComment(comment: String) -> String {
-        return NSLocalizedString(self, tableName: nil, bundle: NSBundle.mainBundle(), value: "", comment: comment)
+    class func currentTime(format: String) -> String {
+        let date = NSDate()
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = NSDateFormatterStyle.FullStyle
+        formatter.dateFormat = format
+        let string = formatter.stringFromDate(date)
+        return string
     }
 }

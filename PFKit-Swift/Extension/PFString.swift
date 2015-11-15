@@ -1,13 +1,13 @@
 //
-//  PFJudge.swift
+//  PFString.swift
 //  PFKit-Swift
 //
-//  Created by PFei_He on 15/11/12.
+//  Created by PFei_He on 15/11/15.
 //  Copyright © 2015年 PF-Lib. All rights reserved.
 //
 //  https://github.com/PFei-He/PFKit-Swift
 //
-//  vesion: 0.0.3
+//  vesion: 0.0.5
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -92,5 +92,28 @@ extension String {
             predicateCU.evaluateWithObject(self) ||
             predicateCT.evaluateWithObject(self) ||
             predicatePHS.evaluateWithObject(self)
+    }
+}
+
+extension String {
+    
+    /**
+     本地化
+     - Note:
+     - Parameter 无参
+     - Returns: 当前语言环境对应的值
+     */
+    var localized: String {
+        return NSLocalizedString(self, tableName: nil, bundle: NSBundle.mainBundle(), value: "", comment: "")
+    }
+    
+    /**
+     本地化带注释
+     - Note:
+     - Parameter comment: 本地化文件中的注释
+     - Returns: 当前语言环境对应的值
+     */
+    func localizedWithComment(comment: String) -> String {
+        return NSLocalizedString(self, tableName: nil, bundle: NSBundle.mainBundle(), value: "", comment: comment)
     }
 }

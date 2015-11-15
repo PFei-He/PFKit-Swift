@@ -1,5 +1,5 @@
 //
-//  PFTime.swift
+//  PFModel.swift
 //  PFKit-Swift
 //
 //  Created by PFei_He on 15/11/12.
@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFKit-Swift
 //
-//  vesion: 0.0.3
+//  vesion: 0.0.5
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -28,22 +28,39 @@
 //  THE SOFTWARE.
 //
 
-import UIKit
+import Foundation
 
-class PFTime: NSObject {
+class PFModel: NSObject {
 
+    ///JSON数据
+    var JSON: AnyObject? {
+        didSet {
+            parseJSON(JSON)
+        }
+    }
+    
     /**
-     根据格式获取当前时间
+     初始化
      - Note:
-     - Parameter format: 输出的时间格式
-     - Returns: 当前时间
+     - Parameter JSON: JSON数据
+     - Returns:
      */
-    class func currentTime(format: String) -> String {
-        let date = NSDate()
-        let formatter = NSDateFormatter()
-        formatter.dateStyle = NSDateFormatterStyle.FullStyle
-        formatter.dateFormat = format
-        let string = formatter.stringFromDate(date)
-        return string
+    convenience init(JSON: AnyObject?) {
+        self.init()
+        parseJSON(JSON)
+    }
+    
+    ///解析JSON
+    private func parseJSON(JSON: AnyObject?) {
+        if JSON != nil && JSON is Dictionary<String, AnyObject> {
+            setValuesForKeysWithDictionary(JSON as! Dictionary<String, AnyObject>)
+        } else {
+            print("The object isn't Dictionary<String, AnyObject>")
+        }
+    }
+    
+    //获取未被声明的对象
+    override func setValue(value: AnyObject?, forUndefinedKey key: String) {
+        print("**Class->"+String(classForCoder), "UndefinedKey->"+key, "Value->"+String(value), "Type->"+String(value?.classForCoder)+"**")
     }
 }
