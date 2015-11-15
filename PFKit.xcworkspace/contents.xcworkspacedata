@@ -2,16 +2,16 @@
 <Workspace
    version = "1.0">
    <Group
-      location = "group:PFKit"
-      name = "PFKit">
+      location = "group:PFKit-Swift"
+      name = "PFKit-Swift">
       <Group
          location = "group:Extension"
          name = "Extension">
          <FileRef
-            location = "group:PFJudge.swift">
+            location = "group:PFString.swift">
          </FileRef>
          <FileRef
-            location = "group:PFLocalized.swift">
+            location = "group:PFView.swift">
          </FileRef>
       </Group>
       <Group
