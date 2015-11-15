@@ -15,8 +15,8 @@
 * PFTime - 可实现时间和时间戳的互相转换
 
 #### Extension ####
-* PFJudge - 对字符串增加各种判断和匹配功能
-* PFLocalize - 可实现字符串的国际化和本地化
+* PFString - String扩展
+* PFView - UIView扩展
 
 安装
 ---
