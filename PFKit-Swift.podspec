@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'PFKit' do |ss|
-    ss.source_files = 'PFKit-Swift/Extension/PF{File,Model,QRCode,Time}.swift'
+    ss.source_files = 'PFKit-Swift/PFKit/PF{File,Model,QRCode,Time}.swift'
   end
 end
