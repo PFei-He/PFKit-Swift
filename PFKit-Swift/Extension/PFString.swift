@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFKit-Swift
 //
-//  vesion: 0.1.0
+//  vesion: 0.1.1
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -38,7 +38,7 @@ extension String {
      - Parameter 无参
      - Returns: `true` 或 `false`
      */
-    func isQQ() -> Bool {
+    public func isQQ() -> Bool {
         let regex = "(^[0-9]*$)"
         let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
         return predicate.evaluateWithObject(self)
@@ -50,7 +50,7 @@ extension String {
      - Parameter 无参
      - Returns: `true` 或 `false`
      */
-    func isEmail() -> Bool {
+    public func isEmail() -> Bool {
         let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
         let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
         return predicate.evaluateWithObject(self)
@@ -62,7 +62,7 @@ extension String {
      - Parameter 无参
      - Returns: `true` 或 `false`
      */
-    func isURL() -> Bool {
+    public func isURL() -> Bool {
         let regex = "(http[s]{0,1}|ftp):\\/\\/([\\w-]+\\.)+[\\w-]+(\\/[\\w- .\\/?%&=]*)?"
         let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
         return predicate.evaluateWithObject(self)
@@ -74,7 +74,7 @@ extension String {
      - Parameter 无参
      - Returns: `true` 或 `false`
      */
-    func isMobilePhoneNumber() -> Bool {
+    public func isMobilePhoneNumber() -> Bool {
         let regexMobile = "^1(3[0-9]|5[0-35-9]|8[025-9])\\d{8}$"
         let regexCM = "^1(34[0-8]|(3[5-9]|5[017-9]|8[278])\\d)\\d{7}$"
         let regexCU = "^1(3[0-2]|5[256]|8[56])\\d{8}$"
@@ -103,7 +103,7 @@ extension String {
      - Parameter 无参
      - Returns: 当前语言环境对应的值
      */
-    var localized: String {
+    public var localized: String {
         return NSLocalizedString(self, tableName: nil, bundle: NSBundle.mainBundle(), value: "", comment: "")
     }
     
@@ -113,7 +113,7 @@ extension String {
      - Parameter comment: 本地化文件中的注释
      - Returns: 当前语言环境对应的值
      */
-    func localizedWithComment(comment: String) -> String {
+    public func localizedWithComment(comment: String) -> String {
         return NSLocalizedString(self, tableName: nil, bundle: NSBundle.mainBundle(), value: "", comment: comment)
     }
 }

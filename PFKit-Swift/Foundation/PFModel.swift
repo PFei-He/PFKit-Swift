@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFKit-Swift
 //
-//  vesion: 0.1.0
+//  vesion: 0.1.1
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -30,10 +30,10 @@
 
 import Foundation
 
-class PFModel: NSObject {
+public class PFModel: NSObject {
 
     ///JSON数据
-    var JSON: AnyObject? {
+    public var JSON: AnyObject? {
         didSet {
             parseJSON(JSON)
         }
@@ -45,7 +45,7 @@ class PFModel: NSObject {
      - Parameter JSON: JSON数据
      - Returns:
      */
-    convenience init(JSON: AnyObject?) {
+    public convenience init(JSON: AnyObject?) {
         self.init()
         parseJSON(JSON)
     }
@@ -60,7 +60,7 @@ class PFModel: NSObject {
     }
     
     //获取未被声明的对象
-    override func setValue(value: AnyObject?, forUndefinedKey key: String) {
+    public override func setValue(value: AnyObject?, forUndefinedKey key: String) {
         print("**Class->"+String(classForCoder), "UndefinedKey->"+key, "Value->"+String(value), "Type->"+String(value?.classForCoder)+"**")
     }
 }

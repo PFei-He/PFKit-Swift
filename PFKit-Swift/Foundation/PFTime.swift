@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFKit-Swift
 //
-//  vesion: 0.1.0
+//  vesion: 0.1.1
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -28,9 +28,9 @@
 //  THE SOFTWARE.
 //
 
-import UIKit
+import Foundation
 
-class PFTime: NSObject {
+public class PFTime: NSObject {
 
     /**
      根据格式获取当前时间
@@ -38,7 +38,7 @@ class PFTime: NSObject {
      - Parameter format: 输出的时间格式
      - Returns: 当前时间
      */
-    class func currentTime(format: String) -> String {
+    public class func currentTime(format: String) -> String {
         let date = NSDate()
         let formatter = NSDateFormatter()
         formatter.dateStyle = NSDateFormatterStyle.FullStyle

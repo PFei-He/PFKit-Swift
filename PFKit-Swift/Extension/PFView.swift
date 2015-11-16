@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFKit-Swift
 //
-//  vesion: 0.1.0
+//  vesion: 0.1.1
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -34,8 +34,8 @@ extension UIView {
     
     // MARK: -
 
-    ///
-    var origin: CGPoint {
+    ///坐标
+    public var origin: CGPoint {
         get {
             return frame.origin
         } set {
@@ -45,8 +45,8 @@ extension UIView {
         }
     }
     
-    ///
-    var x: CGFloat {
+    ///X坐标
+    public var x: CGFloat {
         get {
             return frame.origin.x
         } set {
@@ -56,8 +56,8 @@ extension UIView {
         }
     }
     
-    ///
-    var y: CGFloat {
+    ///Y坐标
+    public var y: CGFloat {
         get {
             return frame.origin.y
         } set {
@@ -69,8 +69,8 @@ extension UIView {
     
     // MARK: -
     
-    ///
-    var size: CGSize {
+    ///尺寸
+    public var size: CGSize {
         get {
             return frame.size
         } set {
@@ -80,8 +80,8 @@ extension UIView {
         }
     }
     
-    ///
-    var width: CGFloat {
+    ///宽
+    public var width: CGFloat {
         get {
             return frame.width
         } set {
@@ -91,8 +91,8 @@ extension UIView {
         }
     }
     
-    ///
-    var height: CGFloat {
+    ///高
+    public var height: CGFloat {
         get {
             return frame.height
         } set {
@@ -104,8 +104,8 @@ extension UIView {
     
     //MARK: -
     
-    ///
-    var top: CGFloat {
+    ///上边缘
+    public var top: CGFloat {
         get {
             return frame.origin.y
         } set {
@@ -115,8 +115,8 @@ extension UIView {
         }
     }
     
-    ///
-    var left: CGFloat {
+    ///左边缘
+    public var left: CGFloat {
         get {
             return frame.origin.x
         } set {
@@ -126,8 +126,8 @@ extension UIView {
         }
     }
     
-    ///
-    var bottom: CGFloat {
+    ///下边缘
+    public var bottom: CGFloat {
         get {
             return frame.origin.y + frame.size.height
         } set {
@@ -137,8 +137,8 @@ extension UIView {
         }
     }
     
-    ///
-    var right: CGFloat {
+    ///右边缘
+    public var right: CGFloat {
         get {
             return frame.origin.x + frame.size.width
         } set {
@@ -150,8 +150,15 @@ extension UIView {
     
     // MARK: -
     
-    ///
-    var centerX: CGFloat {
+    ///中心点
+    public var boundsCenter: CGPoint {
+        get {
+            return CGPointMake(CGRectGetMidX(bounds), CGRectGetMidY(bounds))
+        }
+    }
+    
+    ///中心点的X坐标
+    public var centerX: CGFloat {
         get {
             return center.x
         } set {
@@ -161,8 +168,8 @@ extension UIView {
         }
     }
     
-    ///
-    var centerY: CGFloat {
+    ///中心点的Y坐标
+    public var centerY: CGFloat {
         get {
             return center.y
         } set {
@@ -172,17 +179,10 @@ extension UIView {
         }
     }
     
-    ///
-    var boundsCenter: CGPoint {
-        get {
-            return CGPointMake(CGRectGetMidX(bounds), CGRectGetMidY(bounds))
-        }
-    }
-    
     // MARK: -
     
     ///
-    var position: CGPoint {
+    public var position: CGPoint {
         get {
             return frame.origin
         } set {

@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFKit-Swift
 //
-//  vesion: 0.1.0
+//  vesion: 0.1.1
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -30,7 +30,7 @@
 
 import Foundation
 
-class PFFile: NSObject {
+public class PFFile: NSObject {
 
     /**
      创建文件
@@ -38,7 +38,7 @@ class PFFile: NSObject {
      - Parameter fileName: 文件名
      - Returns:
      */
-    class func createFile(fileName: String) {
+    public class func createFile(fileName: String) {
         let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
         let path = NSURL(fileURLWithPath: paths[0]).URLByAppendingPathComponent(fileName)
         let manager = NSFileManager.defaultManager()
@@ -53,7 +53,7 @@ class PFFile: NSObject {
      - Parameter fileName: 文件名
      - Returns: 文件中的数据
      */
-    class func readFile(fileName: String) -> Dictionary<String, AnyObject> {
+    public class func readFile(fileName: String) -> Dictionary<String, AnyObject> {
         let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
         let path = NSURL(fileURLWithPath: paths[0]).URLByAppendingPathComponent(fileName)
         return NSDictionary(contentsOfFile: path.path!) as! Dictionary<String, AnyObject>
@@ -65,7 +65,7 @@ class PFFile: NSObject {
      - Parameter fileName: 文件名
      - Returns: 文件中的数据
      */
-    class func readJSON(fileName: String) -> Dictionary<String, AnyObject> {
+    public class func readJSON(fileName: String) -> Dictionary<String, AnyObject> {
         let path = NSBundle.mainBundle().pathForResource(fileName, ofType: "json")
         let string = try? String(contentsOfFile: path!, encoding: NSUTF8StringEncoding)
         let data = string?.dataUsingEncoding(NSUTF8StringEncoding)
@@ -79,7 +79,7 @@ class PFFile: NSObject {
      - Parameter params: 写入文件的参数
      - Returns: 写入结果
      */
-    class func writeToFile(fileName: String, params: Dictionary<String, AnyObject>) -> Bool {
+    public class func writeToFile(fileName: String, params: Dictionary<String, AnyObject>) -> Bool {
         let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
         let path = NSURL(fileURLWithPath: paths[0]).URLByAppendingPathComponent(fileName)
         return (params as NSDictionary).writeToFile(path.path!, atomically: true)
