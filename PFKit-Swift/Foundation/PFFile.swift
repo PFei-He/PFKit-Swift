@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFKit-Swift
 //
-//  vesion: 0.1.1
+//  vesion: 0.1.2
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -36,7 +36,7 @@ public class PFFile: NSObject {
      创建文件
      - Note: 文件存放于沙盒中的Documents文件夹中
      - Parameter fileName: 文件名
-     - Returns:
+     - Returns: 无
      */
     public class func createFile(fileName: String) {
         let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)

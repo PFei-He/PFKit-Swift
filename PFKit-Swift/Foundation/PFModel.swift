@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFKit-Swift
 //
-//  vesion: 0.1.1
+//  vesion: 0.1.2
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -41,9 +41,9 @@ public class PFModel: NSObject {
     
     /**
      初始化
-     - Note:
+     - Note: 无
      - Parameter JSON: JSON数据
-     - Returns:
+     - Returns: Model类实例
      */
     public convenience init(JSON: AnyObject?) {
         self.init()

@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFKit-Swift
 //
-//  vesion: 0.1.1
+//  vesion: 0.1.2
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -34,9 +34,9 @@ extension String {
     
     /**
      判断是否QQ号码
-     - Note:
-     - Parameter 无参
-     - Returns: `true` 或 `false`
+     - Note: 无
+     - Parameter 无
+     - Returns: 判断结果
      */
     public func isQQ() -> Bool {
         let regex = "(^[0-9]*$)"
@@ -46,9 +46,9 @@ extension String {
     
     /**
      判断是否邮箱地址
-     - Note:
-     - Parameter 无参
-     - Returns: `true` 或 `false`
+     - Note: 无
+     - Parameter 无
+     - Returns: 判断结果
      */
     public func isEmail() -> Bool {
         let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
@@ -58,9 +58,9 @@ extension String {
     
     /**
      判断是否URL
-     - Note:
-     - Parameter 无参
-     - Returns: `true` 或 `false`
+     - Note: 无
+     - Parameter 无
+     - Returns: 判断结果
      */
     public func isURL() -> Bool {
         let regex = "(http[s]{0,1}|ftp):\\/\\/([\\w-]+\\.)+[\\w-]+(\\/[\\w- .\\/?%&=]*)?"
@@ -70,9 +70,9 @@ extension String {
     
     /**
      判断是否手机号码
-     - Note:
-     - Parameter 无参
-     - Returns: `true` 或 `false`
+     - Note: 无
+     - Parameter 无
+     - Returns: 判断结果
      */
     public func isMobilePhoneNumber() -> Bool {
         let regexMobile = "^1(3[0-9]|5[0-35-9]|8[025-9])\\d{8}$"
@@ -93,14 +93,50 @@ extension String {
             predicateCT.evaluateWithObject(self) ||
             predicatePHS.evaluateWithObject(self)
     }
+
+    /**
+     匹配邮箱地址
+     - Note: 无
+     - Parameter string: 需要匹配的字符串
+     - Returns: 寻找出的邮箱地址
+     */
+    public func matchesEmail(string: String) -> String {
+        let regulaStr = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+        let regex = try? NSRegularExpression(pattern: regulaStr, options: NSRegularExpressionOptions.CaseInsensitive)
+        let arrayOfAllMatches = regex?.matchesInString(string, options: NSMatchingOptions.ReportProgress, range: NSMakeRange(0, string.characters.count))
+        
+        var matchesStr: String?
+        for match in arrayOfAllMatches! {
+            matchesStr = (string as NSString).substringWithRange(match.range)
+        }
+        return matchesStr!
+    }
+    
+    /**
+     匹配URL
+     - Note: 无
+     - Parameter string: 需要匹配的字符串
+     - Returns: 寻找出的URL
+     */
+    public func matchesURL(string: String) -> String {
+        let regulaStr = "(http[s]{0,1}|ftp):\\/\\/([\\w-]+\\.)+[\\w-]+(\\/[\\w- .\\/?%&=]*)?"
+        let regex = try? NSRegularExpression(pattern: regulaStr, options: NSRegularExpressionOptions.CaseInsensitive)
+        let arrayOfAllMatches = regex?.matchesInString(string, options: NSMatchingOptions.ReportProgress, range: NSMakeRange(0, string.characters.count))
+        
+        var matchesStr: String?
+        for match in arrayOfAllMatches! {
+            matchesStr = (string as NSString).substringWithRange(match.range)
+        }
+        return matchesStr!
+    }
 }
 
 extension String {
     
     /**
      本地化
-     - Note:
-     - Parameter 无参
+     - Note: 无
+     - Parameter 无
      - Returns: 当前语言环境对应的值
      */
     public var localized: String {
@@ -109,7 +145,7 @@ extension String {
     
     /**
      本地化带注释
-     - Note:
+     - Note: 无
      - Parameter comment: 本地化文件中的注释
      - Returns: 当前语言环境对应的值
      */

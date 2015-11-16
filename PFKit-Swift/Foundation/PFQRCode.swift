@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFKit-Swift
 //
-//  vesion: 0.1.1
+//  vesion: 0.1.2
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -34,11 +34,11 @@ public class PFQRCode: NSObject {
 
     /**
      生成二维码图片
-     - Note:
+     - Note: 无
      - Parameter string: 用于生成二维码的字符串
      - Parameter imageNamed: 放置于二维码中间的定制图
      - Parameter codeSize: 二维码的尺寸
-     - Returns:
+     - Returns: 二维码图片
      */
     public class func create(string: String, imageNamed name: String, codeSize size: CGFloat) -> UIImage {
         

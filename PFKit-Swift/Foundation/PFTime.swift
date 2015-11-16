@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFKit-Swift
 //
-//  vesion: 0.1.1
+//  vesion: 0.1.2
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -34,7 +34,7 @@ public class PFTime: NSObject {
 
     /**
      根据格式获取当前时间
-     - Note:
+     - Note: 无
      - Parameter format: 输出的时间格式
      - Returns: 当前时间
      */
