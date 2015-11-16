@@ -22,7 +22,7 @@ class RootViewController: UIViewController {
         let fruits = Fruits(JSON: food.fruit[0])
         print(fruits.fruit)
         
-        imageView.image = PFQRCode.create(Person.sharedInstance().code, imageNamed: "Custom Figure", codeSize: imageView.frame.width)
+        imageView.image = PFQRCode.create(Person.sharedInstance().code, imageNamed: "Custom Figure.jpg", codeSize: imageView.frame.width)
     }
 
     override func didReceiveMemoryWarning() {
